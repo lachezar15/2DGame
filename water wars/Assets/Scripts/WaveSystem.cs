@@ -7,7 +7,7 @@ public class WaveSystem : MonoBehaviour
 {
     public Transform[] spawnPoints;
 
-    public GameObject enemy1;
+    public GameObject enemy1, enemy2;
 
     int wave = 0;
 
@@ -67,6 +67,7 @@ public class WaveSystem : MonoBehaviour
 
             yield return new WaitForSeconds(2);
 
+<<<<<<< Updated upstream
             int spawnPos = Random.Range(0, spawnPoints.Length);
             Instantiate(enemy1, spawnPoints[spawnPos].position, Quaternion.identity);
             yield return new WaitForSeconds(1);
@@ -106,6 +107,22 @@ public class WaveSystem : MonoBehaviour
             int spawnPos9 = Random.Range(0, spawnPoints.Length);
             Instantiate(enemy1, spawnPoints[spawnPos9].position, Quaternion.identity);
             yield return new WaitForSeconds(1);
+=======
+            for (int i = 0; i < 7; i++)
+            {
+                int spawnPos = Random.Range(0, spawnPoints.Length);
+                Instantiate(enemy1, spawnPoints[spawnPos].position, Quaternion.identity);
+                yield return new WaitForSeconds(1);
+
+                if (i % 2 == 0)
+                {
+                    int spawnPos2 = Random.Range(0, spawnPoints.Length);
+                    Instantiate(enemy2, spawnPoints[spawnPos2].position, Quaternion.identity);
+                    yield return new WaitForSeconds(1);
+                }
+
+            }
+>>>>>>> Stashed changes
 
             wave++;
         }

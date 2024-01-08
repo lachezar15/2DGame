@@ -2731,6 +2731,7 @@ MonoBehaviour:
   - {fileID: 2026016959}
   - {fileID: 678438559}
   enemy1: {fileID: 527345382186750011, guid: 614dc85e5bfe0854bb9ca639886b4bd8, type: 3}
+  enemy2: {fileID: 527345382186750011, guid: d11516249a804594f81a0e96c8da677f, type: 3}
   waveText: {fileID: 1569484511}
   anim: {fileID: 1569484510}
 --- !u!4 &1062501605
