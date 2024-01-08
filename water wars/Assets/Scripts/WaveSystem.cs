@@ -35,25 +35,12 @@ public class WaveSystem : MonoBehaviour
 
             yield return new WaitForSeconds(2);
 
-            int spawnPos = Random.Range(0, spawnPoints.Length);
-            Instantiate(enemy1, spawnPoints[spawnPos].position, Quaternion.identity);
-            yield return new WaitForSeconds(1);
-
-            int spawnPos1 = Random.Range(0, spawnPoints.Length);
-            Instantiate(enemy1, spawnPoints[spawnPos1].position, Quaternion.identity);
-            yield return new WaitForSeconds(1);
-
-            int spawnPos2 = Random.Range(0, spawnPoints.Length);
-            Instantiate(enemy1, spawnPoints[spawnPos2].position, Quaternion.identity);
-            yield return new WaitForSeconds(1);
-
-            int spawnPos3 = Random.Range(0, spawnPoints.Length);
-            Instantiate(enemy1, spawnPoints[spawnPos3].position, Quaternion.identity);
-            yield return new WaitForSeconds(1);
-
-            int spawnPos4 = Random.Range(0, spawnPoints.Length);
-            Instantiate(enemy1, spawnPoints[spawnPos4].position, Quaternion.identity);
-            yield return new WaitForSeconds(1);
+            for (int i = 0; i < 5; i++)
+            {
+                int spawnPos = Random.Range(0, spawnPoints.Length);
+                Instantiate(enemy1, spawnPoints[spawnPos].position, Quaternion.identity);
+                yield return new WaitForSeconds(1);
+            }
 
             wave++;
         }
@@ -67,47 +54,6 @@ public class WaveSystem : MonoBehaviour
 
             yield return new WaitForSeconds(2);
 
-<<<<<<< Updated upstream
-            int spawnPos = Random.Range(0, spawnPoints.Length);
-            Instantiate(enemy1, spawnPoints[spawnPos].position, Quaternion.identity);
-            yield return new WaitForSeconds(1);
-
-            int spawnPos1 = Random.Range(0, spawnPoints.Length);
-            Instantiate(enemy1, spawnPoints[spawnPos1].position, Quaternion.identity);
-            yield return new WaitForSeconds(1);
-
-            int spawnPos2 = Random.Range(0, spawnPoints.Length);
-            Instantiate(enemy1, spawnPoints[spawnPos2].position, Quaternion.identity);
-            yield return new WaitForSeconds(1);
-
-            int spawnPos3 = Random.Range(0, spawnPoints.Length);
-            Instantiate(enemy1, spawnPoints[spawnPos3].position, Quaternion.identity);
-            yield return new WaitForSeconds(1);
-
-            int spawnPos4 = Random.Range(0, spawnPoints.Length);
-            Instantiate(enemy1, spawnPoints[spawnPos4].position, Quaternion.identity);
-            yield return new WaitForSeconds(1);
-
-            int spawnPos5 = Random.Range(0, spawnPoints.Length);
-            Instantiate(enemy1, spawnPoints[spawnPos5].position, Quaternion.identity);
-            yield return new WaitForSeconds(1);
-
-            int spawnPos6 = Random.Range(0, spawnPoints.Length);
-            Instantiate(enemy1, spawnPoints[spawnPos6].position, Quaternion.identity);
-            yield return new WaitForSeconds(1);
-
-            int spawnPos7 = Random.Range(0, spawnPoints.Length);
-            Instantiate(enemy1, spawnPoints[spawnPos7].position, Quaternion.identity);
-            yield return new WaitForSeconds(1);
-
-            int spawnPos8 = Random.Range(0, spawnPoints.Length);
-            Instantiate(enemy1, spawnPoints[spawnPos8].position, Quaternion.identity);
-            yield return new WaitForSeconds(1);
-
-            int spawnPos9 = Random.Range(0, spawnPoints.Length);
-            Instantiate(enemy1, spawnPoints[spawnPos9].position, Quaternion.identity);
-            yield return new WaitForSeconds(1);
-=======
             for (int i = 0; i < 7; i++)
             {
                 int spawnPos = Random.Range(0, spawnPoints.Length);
@@ -122,7 +68,6 @@ public class WaveSystem : MonoBehaviour
                 }
 
             }
->>>>>>> Stashed changes
 
             wave++;
         }
