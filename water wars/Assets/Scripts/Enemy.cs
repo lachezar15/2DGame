@@ -9,10 +9,11 @@ public class Enemy : MonoBehaviour
     float timeBtwAttack;
     public float startTimeBtwAttack;
 
+    public GameObject diamondPickup;
+
     private void Start()
     {
         timeBtwAttack = startTimeBtwAttack;
-        StartCoroutine(Dash());
     }
 
     private void Update()
@@ -27,7 +28,12 @@ public class Enemy : MonoBehaviour
         }
 
         if (health <= 0)
-        { 
+        {
+            int rand = Random.Range(0, 5);
+            if (rand == 3)
+            {
+                Instantiate(diamondPickup, transform.position, Quaternion.identity);
+            }
             Destroy(this.gameObject);
         }
     }
@@ -46,18 +52,5 @@ public class Enemy : MonoBehaviour
                 collision.collider.GetComponent<Player>().TakeDamage(10);
             }
         }
-    }
-
-    IEnumerator Dash()
-    {
-        float time = Random.Range(1, 5);
-
-        yield return new WaitForSeconds(time);
-
-        float offset = Random.Range(-1, 2);
-        float offset2 = Random.Range(-1, 2);
-        transform.position = new Vector3(transform.position.x + offset, transform.position.y + offset2, transform.position.z);
-
-        StartCoroutine(Dash());
     }
 }

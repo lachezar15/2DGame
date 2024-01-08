@@ -171,6 +171,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 60
   startTimeBtwAttack: 0.2
+  diamondPickup: {fileID: 3409084266062804047, guid: 88bec79964493d14ab20f5ef1374e178, type: 3}
 --- !u!50 &1299103907262972511
 Rigidbody2D:
   serializedVersion: 4

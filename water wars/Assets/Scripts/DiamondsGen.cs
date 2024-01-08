@@ -11,7 +11,7 @@ public class DiamondsGen : MonoBehaviour
     float timeBtwGen;
     public float startTimeBtwGen;
 
-    float diamondCount;
+    public float diamondCount;
 
     public Shop shopScript;
 
