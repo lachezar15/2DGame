@@ -2505,6 +2505,7 @@ GameObject:
   - component: {fileID: 846197830}
   - component: {fileID: 846197832}
   - component: {fileID: 846197831}
+  - component: {fileID: 846197833}
   m_Layer: 5
   m_Name: BuyMenuPanel
   m_TagString: Untagged
@@ -2572,6 +2573,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 846197829}
   m_CullTransparentMesh: 1
+--- !u!114 &846197833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 846197829}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba2f4a536885438438ae8d67c6076a37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPoints:
+  - {fileID: 1742706545}
+  - {fileID: 2058717749}
+  - {fileID: 517897565}
+  - {fileID: 1928680669}
+  - {fileID: 1536740840}
+  - {fileID: 1834040265}
+  - {fileID: 2026016959}
+  - {fileID: 678438559}
+  playerHelper: {fileID: 527345382186750011, guid: 2a7024dc6057b7344a1a6412ae6e496b, type: 3}
 --- !u!1 &1036668628
 GameObject:
   m_ObjectHideFlags: 0
@@ -3178,7 +3201,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1369034319}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 846197833}
+        m_TargetAssemblyTypeName: SpawnUnits, Assembly-CSharp
+        m_MethodName: SpawnUnit1
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1369034319
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3600,7 +3635,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   diamondsText: {fileID: 1707286424}
   diamondsMult: 1
-  startTimeBtwGen: 2
+  startTimeBtwGen: 3
   diamondCount: 0
   shopScript: {fileID: 0}
 --- !u!61 &1514475752

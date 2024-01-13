@@ -13,11 +13,11 @@ GameObject:
   - component: {fileID: 527345382186749956}
   - component: {fileID: 527345382186749957}
   - component: {fileID: 527345382186750010}
-  - component: {fileID: 527345382186749953}
-  - component: {fileID: -2690399774585347689}
+  - component: {fileID: -2701085094769965464}
+  - component: {fileID: 5158609094078627242}
   m_Layer: 0
-  m_Name: Enemy
-  m_TagString: Enemy
+  m_Name: PlayerHelper
+  m_TagString: PlayerHelper
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -159,22 +159,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!114 &527345382186749953
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 527345382186750011}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a417edeb89863e74898078a288a68a5e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 100
-  startTimeBtwAttack: 0.2
-  diamondPickup: {fileID: 3409084266062804047, guid: 88bec79964493d14ab20f5ef1374e178, type: 3}
---- !u!50 &-2690399774585347689
+--- !u!50 &-2701085094769965464
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
@@ -201,6 +186,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &5158609094078627242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 527345382186750011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2586af6f4cd87641ab8cc9484a67b3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startTimeBtwAttack: 0.2
 --- !u!1 &527345382876812183
 GameObject:
   m_ObjectHideFlags: 0
@@ -275,7 +273,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.90465856, g: 1, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

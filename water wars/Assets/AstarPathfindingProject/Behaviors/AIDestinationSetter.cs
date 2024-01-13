@@ -18,9 +18,33 @@ namespace Pathfinding {
 		public Transform target;
 		IAstarAI ai;
 
+		public GameObject[] enemies;
+		public GameObject nearestEnemy;
+		float distance;
+		float nearestDistance = 10000;
+
         private void Start()
         {
-			target = GameObject.FindGameObjectWithTag("Player").transform;
+			enemies = GameObject.FindGameObjectsWithTag("Enemy");
+
+			if (this.transform.CompareTag("Enemy"))
+			{
+				target = GameObject.FindGameObjectWithTag("Player").transform;
+			}
+			else if (this.transform.CompareTag("PlayerHelper"))
+			{
+				for (int i = 0; i < enemies.Length; i++)
+				{
+					distance = Vector3.Distance(this.transform.position, enemies[i].transform.position);
+
+					if (distance < nearestDistance)
+					{ 
+						nearestEnemy = enemies[i];
+                        target = nearestEnemy.transform;
+                        nearestDistance = distance;
+					}
+				}
+			}
         }
 
         void OnEnable () {
@@ -39,6 +63,23 @@ namespace Pathfinding {
 		/// <summary>Updates the AI's destination every frame</summary>
 		void Update () {
 			if (target != null && ai != null) ai.destination = target.position;
+
+			if (target == null)
+			{
+                enemies = GameObject.FindGameObjectsWithTag("Enemy");
+
+                for (int i = 0; i < enemies.Length; i++)
+                {
+                    distance = Vector3.Distance(this.transform.position, enemies[i].transform.position);
+
+                    if (distance < nearestDistance)
+                    {
+                        nearestEnemy = enemies[i];
+                        target = nearestEnemy.transform;
+                        nearestDistance = distance;
+                    }
+                }
+            }
 		}
 	}
 }
